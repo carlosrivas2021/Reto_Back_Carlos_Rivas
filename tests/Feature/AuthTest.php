@@ -21,21 +21,21 @@ class AuthTest extends TestCase
 
     }
 
-    // public function test_create_user()
-    // {
-    //     $credentials = [
-    //         "name"=>"asdsa",
-    //         "email"=>"carlos@carlos.com",
-    //         "password"=>"1234",
-    //         "c_password"=>"1234"
-    //     ];
+    public function test_create_user()
+    {
+        $credentials = [
+            "name"=>"asdsa",
+            "email"=>"carlos@carlos.com",
+            "password"=>"1234",
+            "c_password"=>"1234"
+        ];
 
-    //     $response = $this->postJson('/api/auth/register', $credentials);
-    //     $response->assertStatus(201) ->assertJson([
-    //         'success' => true,
-    //     ]);
+        $response = $this->postJson('/api/auth/register', $credentials);
+        $response->assertStatus(201) ->assertJson([
+            'success' => true,
+        ]);
 
-    // }
+    }
 
     public function test_login()
     {
